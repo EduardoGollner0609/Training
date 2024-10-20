@@ -1,0 +1,16 @@
+.section-comments {
+  background-color: var(--color-tertiary);
+  padding: 25px 20px;
+}
+
+.section-comments h2 {
+  text-align: center;
+  color: var(--color-secondary);
+  font-size: 20px;
+}
+
+@media (min-width: 960px) {
+  .section-comments h2 {
+    font-size: 32px;
+  }
+}
