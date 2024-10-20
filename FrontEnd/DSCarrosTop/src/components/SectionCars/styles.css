@@ -1,0 +1,15 @@
+.section-cars {
+  margin: 25px 20px;
+}
+
+.section-cars h2 {
+  text-align: center;
+  color: var(--color-secondary);
+  font-size: 20px;
+}
+
+@media(min-width: 960px) {
+    .section-cars h2 {
+        font-size: 32px;
+      }
+    }
