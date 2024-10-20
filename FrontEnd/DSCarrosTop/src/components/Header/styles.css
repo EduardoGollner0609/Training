@@ -1,0 +1,18 @@
+header {
+  background-color: var(--color-primary);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  color: var(--color-quartiary);
+  font-size: 20px;
+}
+
+@media(min-width: 960px) {
+    header h1 {
+        font-size: 24px;
+      }
+}
