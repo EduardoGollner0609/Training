@@ -1,0 +1,14 @@
+.card-comment {
+  background-color: var(--color-quartiary);
+  border: 1px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 25px 20px;
+  margin-top: 25px;
+  max-width: 960px;
+  margin: 25px auto 0px auto;
+}
+
+.card-comment p {
+  color: var(--color-primary);
+  font-size: 16px;
+}
