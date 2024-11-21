@@ -24,6 +24,12 @@ public class EventService {
 		return new EventDTO(repository.save(event));
 	}
 
+	public EventDTO update(Long id, EventDTO eventDTO) {
+		Event event = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Resource Not Found"));
+		copyDtoToEntity(event, eventDTO);
+		return new EventDTO(event);
+	}
+
 	private void copyDtoToEntity(Event event, EventDTO eventDTO) {
 		event.setName(eventDTO.getName());
 		event.setUrl(eventDTO.getUrl());
