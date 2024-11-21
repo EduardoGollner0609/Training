@@ -3,12 +3,15 @@ package com.devsuperior.demo.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.devsuperior.demo.dto.CityDTO;
 import com.devsuperior.demo.entities.City;
 import com.devsuperior.demo.repositories.CityRepository;
+import com.devsuperior.demo.services.exceptions.DatabaseException;
+import com.devsuperior.demo.services.exceptions.ResourceNotFoundException;
 
 @Service
 public class CityService {
@@ -26,4 +29,14 @@ public class CityService {
 		return new CityDTO(repository.save(city));
 	}
 
+	public void delete(Long id) {
+		if (!repository.existsById(id)) {
+			throw new ResourceNotFoundException("Resource Not Found");
+		}
+		try {
+			repository.deleteById(id);
+		} catch (DataIntegrityViolationException e) {
+			throw new DatabaseException("Error Database");
+		}
+	}
 }
