@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
+import com.devsuperior.demo.dto.UserDTO;
 import com.devsuperior.demo.entities.Role;
 import com.devsuperior.demo.entities.User;
 import com.devsuperior.demo.projections.UserDetailsProjection;
@@ -15,7 +17,21 @@ import com.devsuperior.demo.repositories.UserRepository;
 public class UserService implements UserDetailsService {
 
 	@Autowired
+	private PasswordEncoder passwordEncoder;
+
+	@Autowired
 	private UserRepository repository;
+
+	public UserDTO insert(UserDTO userDTO) {
+		User user = new User();
+		copyDtoToEntity(user, userDTO);
+		return new UserDTO(repository.save(user));
+	}
+
+	private void copyDtoToEntity(User user, UserDTO userDTO) {
+		user.setEmail(userDTO.getEmail());
+		user.setPassword(passwordEncoder.encode(userDTO.getPassword()));
+	}
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

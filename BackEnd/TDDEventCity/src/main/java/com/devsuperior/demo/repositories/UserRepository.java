@@ -5,10 +5,10 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import com.devsuperior.demo.entities.Event;
+import com.devsuperior.demo.entities.User;
 import com.devsuperior.demo.projections.UserDetailsProjection;
 
-public interface UserRepository extends JpaRepository<Event, Long> {
+public interface UserRepository extends JpaRepository<User, Long> {
 
 	@Query(nativeQuery = true, value = """
 				SELECT tb_user.email AS username, tb_user.password, tb_role.id AS roleId, tb_role.authority
