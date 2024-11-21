@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.devsuperior.demo.entities.City;
+import com.devsuperior.demo.dto.CityDTO;
 import com.devsuperior.demo.services.CityService;
 
 @RestController
@@ -17,9 +17,9 @@ public class CityController {
 
 	@Autowired
 	private CityService service;
-	
+
 	@GetMapping
-	public ResponseEntity<List<City>> findAll() {
+	public ResponseEntity<List<CityDTO>> findAll() {
 		return ResponseEntity.ok(service.findAll());
 	}
 }
