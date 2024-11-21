@@ -1,8 +1,8 @@
 package com.devsuperior.demo.services;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.devsuperior.demo.dto.EventDTO;
@@ -32,8 +32,8 @@ public class EventService {
 		return new EventDTO(event);
 	}
 
-	public List<EventDTO> findAll() {
-		return repository.findAll().stream().map(event -> new EventDTO(event)).toList();
+	public Page<EventDTO> findAllPaged(Pageable pageable) {
+		return repository.findAll(pageable).map(event -> new EventDTO(event));
 	}
 
 	private void copyDtoToEntity(Event event, EventDTO eventDTO) {
