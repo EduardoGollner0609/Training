@@ -2,11 +2,14 @@ package com.devsuperior.demo.dto;
 
 import com.devsuperior.demo.entities.City;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class CityDTO {
-	
+
 	private Long id;
+	@NotBlank(message = "Campo Requerido.")
 	private String name;
-	
+
 	public CityDTO() {
 	}
 
@@ -14,7 +17,7 @@ public class CityDTO {
 		this.id = id;
 		this.name = name;
 	}
-	
+
 	public CityDTO(City entity) {
 		id = entity.getId();
 		name = entity.getName();

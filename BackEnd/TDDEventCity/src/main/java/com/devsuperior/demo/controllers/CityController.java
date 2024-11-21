@@ -17,6 +17,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.devsuperior.demo.dto.CityDTO;
 import com.devsuperior.demo.services.CityService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping(value = "/cities")
 public class CityController {
@@ -30,7 +32,7 @@ public class CityController {
 	}
 
 	@PostMapping
-	public ResponseEntity<CityDTO> insert(@RequestBody CityDTO cityDTO) {
+	public ResponseEntity<CityDTO> insert(@Valid @RequestBody CityDTO cityDTO) {
 		cityDTO = service.insert(cityDTO);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(cityDTO.getId())
 				.toUri();

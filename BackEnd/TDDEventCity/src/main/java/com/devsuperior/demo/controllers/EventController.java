@@ -18,6 +18,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.devsuperior.demo.dto.EventDTO;
 import com.devsuperior.demo.services.EventService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping(value = "/events")
 public class EventController {
@@ -31,7 +33,7 @@ public class EventController {
 	}
 
 	@PostMapping
-	public ResponseEntity<EventDTO> insert(@RequestBody EventDTO eventDTO) {
+	public ResponseEntity<EventDTO> insert(@Valid @RequestBody EventDTO eventDTO) {
 		eventDTO = service.insert(eventDTO);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(eventDTO.getId())
 				.toUri();
@@ -39,7 +41,7 @@ public class EventController {
 	}
 
 	@PutMapping(value = "/{id}")
-	public ResponseEntity<EventDTO> update(@PathVariable Long id, @RequestBody EventDTO eventDTO) {
+	public ResponseEntity<EventDTO> update(@PathVariable Long id, @Valid @RequestBody EventDTO eventDTO) {
 		eventDTO = service.update(id, eventDTO);
 		return ResponseEntity.ok(eventDTO);
 	}
