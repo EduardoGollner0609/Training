@@ -2,8 +2,8 @@ package com.devsuperior.demo.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.devsuperior.demo.entities.City;
+import com.devsuperior.demo.entities.Event;
 
-public interface EventRepository extends JpaRepository<City, Long> {
+public interface EventRepository extends JpaRepository<Event, Long> {
 
 }
