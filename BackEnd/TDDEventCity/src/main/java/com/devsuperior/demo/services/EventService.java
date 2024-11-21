@@ -1,5 +1,7 @@
 package com.devsuperior.demo.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +30,10 @@ public class EventService {
 		Event event = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Resource Not Found"));
 		copyDtoToEntity(event, eventDTO);
 		return new EventDTO(event);
+	}
+
+	public List<EventDTO> findAll() {
+		return repository.findAll().stream().map(event -> new EventDTO(event)).toList();
 	}
 
 	private void copyDtoToEntity(Event event, EventDTO eventDTO) {
