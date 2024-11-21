@@ -1,7 +1,6 @@
 package com.devsuperior.demo.config.customgrant;
 
 import java.util.Arrays;
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;

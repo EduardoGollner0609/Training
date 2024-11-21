@@ -11,12 +11,12 @@ import jakarta.validation.constraints.NotNull;
 public class EventDTO {
 
 	private Long id;
-	@NotBlank(message = "Campo Requerido")
+	@NotBlank(message = "Campo requerido")
 	private String name;
-	@FutureOrPresent(message = "Data não pode ser passada")
+	@FutureOrPresent(message = "A data do evento não pode ser passada")
 	private LocalDate date;
 	private String url;
-	@NotNull(message = "Campo Requerido")
+	@NotNull(message = "Campo requerido")
 	private Long cityId;
 
 	public EventDTO() {

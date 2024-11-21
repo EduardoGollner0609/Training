@@ -7,7 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 public class CustomUserAuthorities {
 
 	private String username;
-	
+
 	private Collection<? extends GrantedAuthority> authorities;
 
 	public CustomUserAuthorities(String username, Collection<? extends GrantedAuthority> authorities) {
