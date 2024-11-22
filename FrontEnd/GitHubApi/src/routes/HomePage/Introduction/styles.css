@@ -1,0 +1,31 @@
+#section-introduction {
+    margin-top: 27px;
+  padding: 0 20px;
+}
+
+.introduction-invite {
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.introduction-invite h2 {
+  font-size: 48px;
+}
+
+.introduction-invite h3 {
+  color: #7e7e7e;
+  font-size: 24px;
+  margin-bottom: 27px;
+}
+
+.introduction-invite button {
+  border: none;
+  height: 40px;
+  width: 101px;
+  background-color: #1890ff;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
