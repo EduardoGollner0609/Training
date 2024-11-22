@@ -20,6 +20,7 @@ export default function Search() {
     event.preventDefault();
     setUser(undefined);
     setMessageError(false);
+
     axios
       .get(`https://api.github.com/users/${userName}`)
       .then((response) => setUser(response.data))

@@ -9,5 +9,10 @@ header {
 }
 
 nav {
-margin-left: 41px;
+  margin-left: 41px;
+}
+
+header a {
+  text-decoration: none;
+  color: unset;
 }
