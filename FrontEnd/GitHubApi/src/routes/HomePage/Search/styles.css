@@ -1,8 +1,12 @@
 #section-search {
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
 }
 
 .search-account {
+  width: 100%;
   max-width: 1251px;
   margin: 54px auto 0 auto;
   background-color: #e6f7ff;

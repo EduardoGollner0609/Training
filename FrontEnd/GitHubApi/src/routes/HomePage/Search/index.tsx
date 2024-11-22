@@ -1,3 +1,4 @@
+import Account from "../../../components/Account";
 import "./styles.css";
 
 export default function Search() {
@@ -9,6 +10,7 @@ export default function Search() {
           <input type="text" placeholder="Usuário Github" />
           <button>Encontrar</button>
         </div>
+        <Account />
       </section>
     </main>
   );
