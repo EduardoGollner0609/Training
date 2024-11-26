@@ -7,6 +7,7 @@ import ProductComputer from './routes/ProductComputer'
 import ProductEletronic from './routes/ProductEletronic'
 import ProductBook from './routes/ProductBook'
 import AboutPage from './routes/AboutPage'
+import NotFoundPage from './routes/404Page'
 
 function App() {
 
@@ -21,7 +22,10 @@ function App() {
             <Route path="books" element={<ProductBook />} />
           </Route>
           <Route path="/about" element={<AboutPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
+
+
       </Routes>
     </BrowserRouter>
   )
