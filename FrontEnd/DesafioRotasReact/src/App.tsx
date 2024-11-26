@@ -4,6 +4,8 @@ import HomePage from './routes/HomePage'
 import Page from './routes/Page'
 import ProductPage from './routes/ProductPage'
 import ProductComputer from './routes/ProductComputer'
+import ProductEletronic from './routes/ProductEletronic'
+import ProductBook from './routes/ProductBook'
 
 function App() {
 
@@ -14,6 +16,8 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/products" element={<ProductPage />}>
             <Route path="computers" element={<ProductComputer />} />
+            <Route path="eletronics" element={<ProductEletronic />} />
+            <Route path="books" element={<ProductBook />} />
           </Route>
         </Route>
       </Routes>

@@ -1,0 +1,16 @@
+#section-product-page {
+  padding: 20px;
+}
+
+.product-page-content {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1120px;
+}
+
+.product-page-navegation {
+  background-color: #c7c7c7;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}

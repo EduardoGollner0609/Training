@@ -5,7 +5,7 @@ import homeIcon from '../../assets/home-icon.svg';
 
 export default function Header() {
     return (<header>
-        <nav>
+        <nav className="navegation-header">
             <div className="navegation-options">
                 <NavLink to="/home">
                     Início
