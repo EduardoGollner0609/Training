@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './styles.css';
 import homeIcon from '../../assets/home-icon.svg';
 
@@ -18,9 +18,12 @@ export default function Header() {
                 </NavLink>
             </div>
 
-            <div className="navegation-home-icon">
-                <img src={homeIcon} alt="" />
-            </div>
+            <Link to="/home">
+                <div className="navegation-home-icon">
+                    <img src={homeIcon} alt="" />
+                </div>
+            </Link>
+
 
         </nav>
     </header >);
