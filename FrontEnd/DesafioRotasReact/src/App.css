@@ -12,3 +12,7 @@ a:hover {
   text-decoration: none;
   color: unset;
 }
+
+.active {
+  font-weight: 700;
+}

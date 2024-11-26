@@ -6,6 +6,7 @@ import ProductPage from './routes/ProductPage'
 import ProductComputer from './routes/ProductComputer'
 import ProductEletronic from './routes/ProductEletronic'
 import ProductBook from './routes/ProductBook'
+import AboutPage from './routes/AboutPage'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
             <Route path="eletronics" element={<ProductEletronic />} />
             <Route path="books" element={<ProductBook />} />
           </Route>
+          <Route path="/about" element={<AboutPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
