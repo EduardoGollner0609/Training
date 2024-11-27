@@ -32,7 +32,6 @@ export default function Filter({ filterProducts }: Props) {
         if (Number(minPrice) && Number(maxPrice)) {
             filterProducts(Number(minPrice), Number(maxPrice));
         }
-
     }
 
     return (
