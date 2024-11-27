@@ -1,0 +1,14 @@
+header {
+  background-color: #55bc04;
+  height: 70px;
+  padding: 24px 20px;
+}
+
+nav {
+  max-width: 1120px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
