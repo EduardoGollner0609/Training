@@ -1,0 +1,37 @@
+.filter {
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filter input,
+button {
+  width: 200px;
+  height: 40px;
+}
+
+.filter button {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #55bc04;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.filter input {
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #c2c2c2;
+}
+
+.filter input::placeholder {
+  color: #c2c2c2;
+}
