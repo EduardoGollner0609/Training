@@ -1,8 +1,9 @@
+import './styles.css';
 import Product from "../Product";
 
 export default function Listing() {
     return (
-        <div>
+        <div className="listing">
             <Product />
             <Product />
             <Product />
