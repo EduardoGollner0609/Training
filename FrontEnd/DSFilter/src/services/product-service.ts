@@ -10,6 +10,10 @@ export function findAllSortedPrice() {
   return products.sort((x, y) => x.price - y.price);
 }
 
+export function FindLength(): number {
+  return products.length;
+}
+
 const products: ProductDTO[] = [
   {
     id: 1,

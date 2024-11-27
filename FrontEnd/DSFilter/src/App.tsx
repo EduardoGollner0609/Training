@@ -7,18 +7,14 @@ import { ContextProductCount } from './utils/context-products';
 
 function App() {
 
-  const [contextProductCount, setContextProductCount] = useState<number>(productService.findAllSortedPrice.length);
+  const [contextProductCount, setContextProductCount] = useState<number>(productService.FindLength);
 
   return (
-
     <ContextProductCount.Provider value={{ contextProductCount, setContextProductCount }}>
       <Header />
       <ListingBody />
 
     </ContextProductCount.Provider>
-
-
-
   )
 }
 
