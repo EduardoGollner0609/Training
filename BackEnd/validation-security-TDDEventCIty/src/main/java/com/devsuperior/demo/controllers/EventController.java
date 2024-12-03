@@ -42,6 +42,7 @@ public class EventController {
 		return ResponseEntity.created(uri).body(eventDTO);
 	}
 
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@PutMapping(value = "/{id}")
 	public ResponseEntity<EventDTO> update(@PathVariable Long id, @Valid @RequestBody EventDTO eventDTO) {
 		eventDTO = service.update(id, eventDTO);

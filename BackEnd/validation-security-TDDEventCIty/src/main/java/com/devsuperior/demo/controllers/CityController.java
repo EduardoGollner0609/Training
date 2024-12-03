@@ -41,6 +41,7 @@ public class CityController {
 		return ResponseEntity.created(uri).body(cityDTO);
 	}
 
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<Void> delete(@PathVariable Long id) {
 		service.delete(id);
